@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&family=Carter+One&display=swap">
+
+  <style>
+    body {
+      font-family: 'Red Rose', sans-serif;
+      font-size: 2rem; /* Use relative units */
+      background-color: lightgoldenrodyellow;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-family: 'Carter One', sans-serif;
+      color: hotpink;
+      font-size: 3rem; /* Use relative units */
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .h2-container {
+      text-align: center; /* Center the h2 container */
+    }
+    h2 {
+      font-family: 'Red Rose', sans-serif;
+      font-size: 1.5rem; /* Use relative units */
+      color: rgb(41, 41, 41);
+      display: inline-block;
+      margin: 0.5rem 0.5rem; /* Add margin for spacing */
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+    h3 {
+      font-family: 'Carter One', sans-serif;
+      color: rgb(255, 0, 217);
+      text-shadow: 8px 8px 8px #b9aab4;
+      font-size: 2rem; /* Use relative units */
+      text-align: left;
+      margin: 0.5rem 0;
+      display: inline; /* Ensure h3 elements are inline */
+    }
+    h3 a {
+      color: rgb(255, 0, 217); /* Set link color to pink */
+      text-decoration: none; /* Remove underline from links */
+    }
+    h4 {
+      font-family: 'Carter One', sans-serif;
+      color: hotpink;
+      font-size: 1rem; /* Use relative units */
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .text {
+      font-family: 'Red Rose', sans-serif;
+      font-size: 1.5rem; /* Use relative units */
+      color: rgb(41, 41, 41);
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .botton {
+      font-family: 'Red Rose', sans-serif;
+      color: white;
+      background-color: hotpink;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.5rem; /* Use relative units */
+    }
+    @media (max-width: 800px) {
+      body {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+      h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+      }
+      h2, .text, .botton {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+      }
+      h3 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+      h4 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+      }
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-container {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  </style>
+  <title>Mia's FemaleStory Website developed by Charlotte</title>
+</head>
+<body>
+  <h1>FemaleStory : 2015-2025</h1>
+
+  <div class="h2-container">
+    <h2 class="text">Hi, I am Mia. Type your motivation here.</h2>
+    <h2 class="text">
+      <a href="https://miazhang.my.canva.site/resume" class="botton"> About Me </a>
+    </h2>
+  </div>
+
+  <div class="container">
+    <img src="images/poster.jpg" alt="Poster" width="500px" height="500px">
+    <div class="text-container">
+      <p class="text">Paragraph 1 of FemaleStory. </p> 
+      <div class="h3-container">
+        <h3><a href="Kurds.html"> >> Kurds  </a></h3><h3 style="font-family: sans-serif;color: hotpink;text-shadow: none;margin: 1rem;">  |  </h3>
+        <h3><a href="Asian.html"> >> Asian </a></h3><h3 style="font-family: sans-serif;color: hotpink;text-shadow: none;margin: 1rem;">  |  </h3>
+        <h3><a href="Mid-east.html"> >> Mid-East </a></h3>
+      </div>
+      <p class="text">Paragraph 2 of FemaleStory. </p> 
+      <div class="h2-container">
+        <h2 style="color: hotpink;text-align: center;">Tell us about your story</h2>
+        <form id="contactForm" style="text-align: center;">
+          <textarea id="message" rows="4" cols="50" placeholder="Type your message here..."></textarea><br>
+          <button type="button" onclick="sendEmail()" class="botton">Send Email</button>
+        </form>
+    </div>
+    </div>
+  </div>
+
+  <h4 style="font-size: 1.2rem;"> Contact Us: <a href="youremailaddress@xxx.com" style="text-decoration: none;color: hotpink;"> youremailaddress@xxx.com </a></h4>
+  <h4 style="color: grey;font-family: 'Times New Roman', Times, serif;"> Website developed by <a href="https://hxyCharlotte.github.io/portfolio/" style="text-decoration: none;color: gray;"> @Charlotte </a></h4>
+
+  <script>
+    function sendEmail() {
+      var message = document.getElementById('message').value;
+      var email = 'youremailaddress@xxx.com';
+      var subject = 'Message from FemaleStory Website';
+      var mailto_link = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+      window.location.href = mailto_link;
+    }
+  </script>
+
+</body>
+</html>

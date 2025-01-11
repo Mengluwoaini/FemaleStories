@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&family=Carter+One&display=swap">
+
+  <style>
+    body {
+      font-family: 'Red Rose', sans-serif;
+      font-size: 2rem; /* Use relative units */
+      background-color: lightgoldenrodyellow;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-family: 'Carter One', sans-serif;
+      color: hotpink;
+      font-size: 3rem; /* Use relative units */
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    .storyboard {
+      display: none;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+    h4 {
+      font-family: 'Carter One', sans-serif;
+      color: hotpink;
+      font-size: 1rem; /* Use relative units */
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .text {
+      font-family: 'Red Rose', sans-serif;
+      font-size: 1.5rem; /* Use relative units */
+      color: rgb(41, 41, 41);
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .botton {
+      font-family: 'Red Rose', sans-serif;
+      color: white;
+      background-color: hotpink;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1.5rem; /* Use relative units */
+    }
+    @media (max-width: 800px) {
+      body {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+      h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+      }
+      h4 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+      }
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .storyboard {
+        flex-direction: column;
+        align-items: center;
+      }
+      .text-container {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  </style>
+  <title>Asian Women in UK</title>
+</head>
+<body>
+  <h1 id="title"></h1>
+
+  <div class="container">
+    <img src="images/poster.jpg" alt="Poster" width="500px" height="500px">
+    <div class="text-container">
+      <p class="text">Paragraph 1 of FemaleStory. </p> 
+      <p class="text">Paragraph 2 of FemaleStory. </p> 
+    </div>
+  </div>
+  
+  
+<!--
+  <div class="container">
+    <button class="botton" onclick="showStoryboard()">Show Storyboard</button>
+  </div>
+
+  <div class="storyboard">
+    <img id="st1" src="images/Kurds/Storyboard1.jpg" alt="Poster" width="400px" height="400px">
+    <img id="st2" src="images/Kurds/Storyboard2.jpg" alt="Poster" width="400px" height="400px" style="margin-left: 20px;display: none;">
+    </div>
+--> 
+
+  <h4 style="font-size: 1.2rem;"> Contact Us: <a href="youremailaddress@xxx.com" style="text-decoration: none;color: hotpink;"> youremailaddress@xxx.com </a></h4>
+  <h4 style="color: grey;font-family: 'Times New Roman', Times, serif;"> Website developed by <a href="https://hxyCharlotte.github.io/portfolio/" style="text-decoration: none;color: gray;"> @Charlotte </a></h4>
+
+  <script>
+    const text = "Asian Women in UK";
+    let index = 0;
+    function type() {
+      if (index < text.length) {
+        document.getElementById("title").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    window.onload = type;
+/*    
+    function showStoryboard() {
+      document.querySelector(".storyboard").style.display = "flex";
+      document.getElementById("st1").addEventListener("click", function() {
+        document.getElementById("st2").style.display = "flex";
+}
+        */
+    
+  </script>
+
+</body>
+</html>
